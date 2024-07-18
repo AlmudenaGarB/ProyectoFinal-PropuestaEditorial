@@ -1,0 +1,863 @@
+/* ESTRUCTURA: Reset - Tipografías - Selectores universales - Header - Main - Footer - Media Querys */
+/* inicio reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+img,
+picture,
+video,
+iframe {
+    display: block;
+    width: 100%;
+}
+
+form,
+input,
+label,
+select,
+option,
+textarea,
+button {
+    font-size: inherit;
+    font-family: inherit;
+    display: block;
+    background-color: transparent;
+}
+
+:root {
+    font-size: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(26, 11, 0);
+    scroll-behavior: smooth;
+    font-family: 'Literata';
+}
+
+/* Fin reset */
+/* Tipografias */
+/* literata-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Literata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/literata-v35-latin-regular.woff2') format('woff2'); 
+  }
+/* SELECTORES UNIVERSALES */
+h2 {
+    color: rgb(221, 209, 202);
+    text-transform: uppercase;
+    font-size: 10vw;
+}
+h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+}
+
+/* SELECTION DE SELECTORES UNIVERSALES */
+p::selection, h3::selection, b::selection, ins::selection, i::selection {
+    background-color: rgb(26, 11, 0);
+    color: rgb(221, 209, 202);
+}
+h1::selection, a::selection, span::selection, .footer__icon-p::selection, .footer__author::selection {
+    background-color: rgb(221, 209, 202);
+    color: rgb(26, 11, 0);
+}
+img::selection {
+    background-color: rgb(196, 174, 161);
+}
+/* Selectores puestos en conjunto para reducir el número de declaraciones en el mismo elemento y evitar las duplicaciones, lo que nos permitira tener una mejor complejidad y actuación en nuestro codigo*/
+h1, .main__intro-h3 {
+    font-size: 2em;
+}
+.main, .main__intro, .main__religions-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.header, .main__intro-slider, .main__religions-picture, .main__characters-option{
+    overflow: hidden;
+    position: relative;
+}
+.header__video, .header__text, .main__territories-option, .main__religions-text, .main__characters-btn, .footer::before{
+    position: absolute;
+}
+h2::selection,  .main__intro-p::selection, .main__intro-slider, .main__intro-tema::selection, .main__territories-btn, .main__territories-option, .main__characters-lightbox-btn-close {
+    background-color: rgb(196, 174, 161);
+    color: rgb(26, 11, 0);
+}
+
+/* CABECERA PAGINA */
+.header{
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+
+    color: rgb(255, 255, 255);
+}
+.header__video {
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+    z-index: -1;
+}
+/* TITULO + NAVEGADOR. Está establecido como browser y no como header directamente, ya que he considerado el video dentro del Header y de esta manera, podía situarlo como un fondo. Pero en lo convencional, los elementos dentro del browser serían el header clásico */
+.header__browser {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    padding: 2rem 5rem;
+
+    z-index: 2;
+}
+.header__browser-title {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3.125rem;
+}
+.header__browser-logo {
+    width: 50px;
+}
+/* El botón solo es visible cuando tenemos un navegador más pequeño, permitiendonos realizar el menu responsive */
+.header__browser-btn {
+    display: none;
+    font-size: 2em;
+    color: white;
+}
+/* menu de navegación */
+.header__browser-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+
+    z-index: 3;
+}
+.header__browser-li {
+    font-size: 1.25em;
+    z-index: 4;
+
+    transition: opacity .5s ease;
+}
+/* HOVER SOBRE LOS BOTONES DEL MENU DE NAVEGACION */
+.header__browser-ul:hover .header__browser-li {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.header__browser-ul:hover .header__browser-li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* FRASE SITUADA SOBRE EL VIDEO*/
+.header__text {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    hyphens: auto;
+}
+.header__text-p{
+    width: 90%;
+    font-size: 2.8em;
+
+    text-align: center;
+}
+/* el span es usado para la animación que tiene la frase */
+span {
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .8s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+span.fade {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+.main {
+    width: 100%;
+}
+/* ELEMENTOS SELECCIONADOS PARA SCROLL */
+.main__territories,
+.main__religions,
+.main__characters,
+.main__intro {
+    width: 90%;
+    margin-top: 5rem;
+
+    opacity: 0%;
+    transform: translateY(50px);
+    transition: 1s;
+}
+.active{
+    opacity: 100%;
+    transition: 1s;
+    transform: translateY(-50px);
+}
+
+/* FICHA TÉCNICA */
+.main__intro {
+    gap: 3rem;
+    color: rgb(221, 209, 202);
+}
+
+/* SINOPSIS */
+.main__intro-p {
+    width: 80%;
+    align-self: flex-end;
+    text-align: end;
+
+    font-size: 1.5em;
+    word-spacing: 10px;
+    line-height: 2.5rem;
+    margin-top: 1rem;
+}
+/* SLIDER.  */
+.main__intro-slider {
+    width: 80%;
+
+    border-radius: 1rem;
+}
+/* ABARCA EL TEXTO */
+.main__intro-info {
+    width: 300%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: all .5s ease;
+    font-size: 1.3em;
+    padding: 1rem;
+    gap: 2rem;
+}
+/* Cada pestaña independiente del slider */
+.main__intro-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 1rem;
+
+    text-align: justify;
+}
+.main__intro-subtitle {
+    text-decoration: underline;
+}
+.main__intro-text {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+    border: 2px solid rgb(26, 11, 0);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all .5s ease;
+}
+.main__intro-text:hover {
+    color: rgb(221, 209, 202);
+    background-color: rgb(26, 11, 0);
+}
+/* Botones del slider */
+.main__intro-ul {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.main__intro-btn {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(26, 11, 0);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.main__intro-btn:hover {
+    box-shadow: 0 0 7px rgb(59, 52, 47, 1);
+    background-color: rgb(221, 209, 202);
+}
+/* SUBTEMAS. Cada uno de ellos al hacer hover cambia de color, por eso ha sido necesario seleccionar cada child y la especificidad es más alta */
+.main__intro-temas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    gap: 2rem;
+    
+}
+.main__intro-tema:hover {
+    font-weight: bold;
+    text-shadow: 0 0 7px rgb(221, 209, 202, 1);
+}
+.main__intro-tema:nth-child(1):hover {
+    color: rgb(249, 168, 255);
+}
+.main__intro-tema:nth-child(2):hover {
+    color: rgb(216, 255, 168);
+}
+.main__intro-tema:nth-child(3):hover {
+    color: rgb(232, 168, 255);
+}
+.main__intro-tema:nth-child(4):hover {
+    color: rgb(255, 241, 168);
+}
+.main__intro-tema:nth-child(5):hover {
+    color: rgb(168, 210, 255);
+}
+.main__intro-tema:nth-child(6):hover {
+    color: rgb(255, 168, 168);
+}
+
+/* TERRITORIOS Y TRIBUS */
+/* Tabs - territorio */
+.main__territories-tabs {
+    width: 80%;
+    margin: 3rem auto;
+    border-radius: .625rem;
+}
+/* Botones superiores */
+.main__territories-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__territories-btn {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+
+    padding: 1rem 4rem .5rem;
+    font-size: 1.2em;
+}
+.main__territories-btn::selection {
+    background-color: rgb(26, 11, 0);
+    color: rgb(196, 174, 161);
+}
+/* BOTON QUE VA A ESTAR ACTIVO AL HACER CLICK SOBRE ÉL */
+.main__territories-btn.is-active {
+    font-weight: bold;
+}
+/* Contenido en las pestañas */
+.main__territories-wrapper{
+    position: relative;
+}
+.main__territories-option.is-active{
+    opacity: 1;
+}
+.main__territories-option {
+    top: 0;
+
+    opacity: 0;
+
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+/* PESTAÑA QUE ESTA ACTIVA AL ABRIR EL NAVEGADOR */
+.main__territories-option:first-child {
+    position: static;
+}
+/* Las imagenes desaparecen cuando el tamaño de pantalla encoge */
+.main__territories-img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 11, 0);
+    border-radius: 1rem;
+    border: 5px solid rgb(26, 11, 0);
+}
+/* TEXTO */
+.main__territories-text {
+    padding: 2rem;
+}
+.main__territories-h3 {
+    margin-top: 1rem;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.main__territories-p {
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.7rem;
+}
+
+/* RELIGIONES */
+/* GRID DE CUATRO */
+.main__religions-grid {
+    width: 80%;
+    margin: 48px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+}
+/* Imagen de fondo */
+.main__religions-img {
+    opacity: 0.5;
+    transition: all .5s ease;
+    transform: scale(1.5);
+}
+/* Animación, al hacer hover la imagen se ve completa */
+
+.main__religions-picture:hover img {
+    transform: scale(1);
+    opacity: 1;
+}
+/* TEXTO */
+.main__religions-text {
+    width: 90%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    gap: .5rem;
+
+    color: white;
+
+    text-align: center;
+    font-size: 1em;
+}
+/* Titulo siempre visible */
+.main__religions-title {
+    font-size: 1.5em;
+    transition: all .5s;
+}
+/* Texto oculto */
+.main__religions-p {
+    opacity: 0;
+    transition: all .5s;
+}
+/* Animacion. Al hacer hover el texto que estaba oculto aparece y el texto visible se mueve para dejarle hueco */
+.main__religions-picture:hover h3 {
+    transform: translate(0, -400%);
+    color: rgb(196, 174, 161);
+    text-shadow: 1px 2px 5px rgb(26, 11, 0);
+}
+.main__religions-picture:hover p {
+    transform: translate(0, -70%);
+    opacity: 1;
+}
+
+/* PERSONAJES */
+/* Grid de seis columnas y tres filas */
+.main__characters-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+/* Personaje completo */
+/* Imagen personaje */
+.main__characters-img {
+    width: 100%;
+    height: auto; 
+    transition: all .2s ease;
+    opacity: .7;
+    z-index: 0;
+    pointer-events: none;
+}
+.main__characters-option:hover img{
+    border-radius: 2rem;
+    border: 5px solid rgb(196, 174, 161);
+    opacity: 1;
+}
+/* Botón que abre el lightbox */
+.main__characters-btn {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.5em;
+    
+    transition: all .5s ease;
+    z-index: 1;
+}
+.main__characters-btn::selection{
+    background-color: rgb(26, 11, 0);
+}
+.main__characters-btn:hover{
+    background-color: rgb(11, 11, 11, 25%);
+    color: rgb(196, 174, 161);
+    text-shadow: 1px 2px 5px rgb(26, 11, 0);
+}
+/* Pestaña superior que da información extra de los personajes */
+.main__characters-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.main__characters-lightbox-panel {
+    background-color: rgb(26, 11, 0, 90%);
+    padding: 1.25rem;
+    border-radius: .625rem;
+    box-shadow: 0 0 10px rgba(196, 174, 161, 0.5);
+    max-width: 90%;
+    text-align: center;
+    gap: 1rem;
+}
+.main__characters-lightbox-name{
+    color: rgb(196, 174, 161);
+    text-shadow: 1px 2px 5px rgb(26, 11, 0);
+    font-size: 2em;
+}
+.main__characters-lightbox-p {
+    color: white;
+    font-size: 1em;
+    line-height: 2rem;
+
+}
+/* Botón que cierra el lightbox */
+.main__characters-lightbox-btn-close {
+    display: block;
+    margin: 1.25rem auto 0;
+    padding: .625rem 1.25rem;
+    border-radius: .3125rem;
+
+    transition: all .5s ease;
+}
+.main__characters-lightbox-btn-close:hover {
+    padding: .625rem 2rem;
+    font-weight: bold;
+}
+/* ARREGLO PARA QUE EL HOVER SOBRE IMG NO SE MANTENGA AL ABRIR LIGHTBOX */
+.lightbox-active .main__characters-option:hover img {
+    border-radius: 0;
+    border: none;
+}
+
+/* PIE DE PAGINA */
+.footer{
+    width: 100%;
+    position: relative;
+    color: rgb(221, 209, 202);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+/* Línea sobre el footer */
+.footer::before {
+    width: 100%;
+    content: '';
+    background-color: rgb(221, 209, 202);
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+/* Redes sociales */
+.footer__rsss, .footer-icon{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer__rsss-rss-img{
+    width: 25px;
+}
+/* Titulo */
+
+.footer__icon-p{
+    font-size: 1.2em;
+}
+/* Autor */
+.footer__author{
+    font-size: .8em;
+}
+
+/* MEDIA QUERYS */
+/* TAMAÑOS PARA PORTATIL */
+@media (max-width: 1560px) {
+    .main__territories-btn {
+        padding: 1rem 3rem .5rem;
+    }
+    .main__territories-text {
+        padding: 1.7rem;
+    }
+    .main__territories-p {
+        line-height: 1.5rem;
+        font-size: .8em;
+    }
+    .main__religions-text {
+        font-size: .875em;
+    }
+}
+@media (max-width: 1300px) {
+    .main__territories-btn {
+        font-size: 1.1em;
+    }
+    .main__territories-text {
+        padding: 1.5rem;
+    }
+    .main__territories-h3 {
+        font-size: 1.7em;
+    }
+    .main__territories-p {
+        line-height: 1.3rem;
+        font-size: .7em;
+    }
+    .main__religions-text {
+        font-size: .75em;
+    }
+}
+@media (max-width: 1260px) {
+    .main__intro-p {
+        font-size: 1.3em;
+    }
+    .main__intro-info,
+    .main__intro-temas, .main__religions-text {
+        font-size: 1em;
+    }
+    .main__intro-h3 {
+        font-size: 1.8em;
+    }
+    .main__territories-btn {
+        padding: 1rem 2rem .5rem;
+    }
+    .main__territories-text {
+        padding: 1.3rem;
+    }
+    .main__territories-p {
+        line-height: 1.1rem;
+    }
+/* Disminuyen el número de columnas y aumentan el número de líneas para favorecer la visualización */
+    .main__religions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .main__characters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    /* MENU RESPONSIVE */
+    .header__browser-btn,
+    .header__browser-nav.is-active {
+        display: block;
+    }
+    .header__browser-nav {
+        width: 100%;
+        display: none;
+    }
+    .header__browser-ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 1rem 0 0;
+        gap: 1rem;
+    }
+
+    .header__browser-li:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+/* Desaparece la imagen para favorecer la visualización */
+    .main__territories-option {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main__territories-img {
+        display: none;
+    }
+
+    .main__territories-btn {
+        padding: 1rem 1rem .5rem;
+    }
+}
+
+/* TAMAÑOS PARA TABLET */
+@media (max-width: 768px) {
+    .main__intro-p {
+        font-size: 1.1em;
+        line-height: 2rem;
+    }
+
+    .main__intro-info, .main__intro-temas {
+        font-size: .8em;
+    }
+    .main__intro-h3 {
+        font-size: 1.6em;
+    }
+
+    .main__intro-temas {
+        gap: 1.5rem;
+    }
+
+    .main__religions-text {
+        font-size: .6em;
+    }
+
+    .header__browser-h1 {
+        display: none;
+    }
+
+    .main__territories-btn {
+        font-size: 1em;
+        padding: 1rem .5rem .5rem;
+    }
+    .main__territories-option, .main__territories-text {
+        padding: 1.5rem;
+    }
+    .main__territories-h3 {
+        font-size: 1.5em;
+    }
+    .main__territories-p {
+        line-height: 1rem;
+    }
+/* Disminuyen el número de columnas y aumentan el número de líneas para favorecer la visualización */
+    .main__religions-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .main__religions-text {
+        font-size: 1.5em;
+    }
+/* Disminuyen el número de columnas y aumentan el número de líneas para favorecer la visualización */
+    .main__characters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__icon{
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .main__territories-btn {
+        font-size: .8em;
+    }
+
+    .main__religions-text {
+        font-size: 1.2em;
+        gap: .2rem;
+    }
+}
+
+/* TAMAÑOS PARA MOVIL */
+@media (max-width: 470px) {
+    .main__intro-p {
+        font-size: .8em;
+        line-height: 1.5rem;
+    }
+    .main__territories-btn {
+        font-size: .6em;
+    }
+    .main__intro-temas{
+        flex-flow: row wrap;
+    }
+    .main__territories-option, .main__territories-text {
+        padding: 1rem;
+    }
+    .main__territories-h3 {
+        font-size: 1em;
+    }
+    .main__territories-p {
+        line-height: .8rem;
+        font-size: .5em;
+    }
+
+}
+
+@media (max-width: 425px) {
+    /* Desaparece el menu responsive */
+    .header__browser-btn {
+        display: none;
+    }
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+    .header__browser{
+        justify-content: center;
+    }
+    .main__intro-p {
+        font-size: .6em;
+        line-height: 1rem;
+    }
+    .main__territories-btn {
+        padding: 1rem .1rem .5rem;
+
+    }
+    .main__religions-text {
+        font-size: .75em;
+    }
+}

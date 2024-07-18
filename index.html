@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Editorial: Proyecto Mestizos</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <meta name="description" content="Propuesta Editorial">
+</head>
+<!-- ESTRUCTURA GENERAL: Encabezado (header) - Contenido principal (main) - Pie de página (footer) -->
+
+<body>
+    <header class="header">
+        <!-- CABECERA SUPERIOR, ELEMENTOS CLAVES PARA LA NAVEGACION-->
+        <div class="header__browser">
+            <!-- Nombre del proyecto y logo -->
+            <div class="header__browser-title">
+                <h1 class="header__browser-h1">Proyecto Mestizos</h1>
+                <img src="assets/logo.svg" alt="Logo" class="header__browser-logo" width="50" height="50" title="Logo">
+            </div>
+            <!-- Botón para crear menu responsive -->
+            <button class="header__browser-btn">&#9776;</button>
+            <!-- MENU  DE NAVEGACION. Redirige directamente a cada zona de la pagina web sin necesidar de hacer scroll-->
+            <nav class="header__browser-nav">
+                <ul class="header__browser-ul">
+                    <li class="header__browser-li"><a href="#main__territories-h2">Territorios</a></li>
+                    <li class="header__browser-li"><a href="#main__religions-h2">Religiones</a></li>
+                    <li class="header__browser-li"><a href="#main__characters-h2">Personajes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Frase de inicio de la historia -->
+        <div class="header__text">
+            <p class="header__text-p">
+                Dicen&nbsp;que&nbsp;nacemos&nbsp;y&nbsp;morimos&nbsp;en&nbsp;soledad,&nbsp;pero&nbsp;no&nbsp;podía&nbsp;ser&nbsp;verdad,&nbsp;porque&nbsp;ella&nbsp;conoció&nbsp;la&nbsp;muerte&nbsp;nada&nbsp;más&nbsp;nacer...
+            </p>
+        </div>
+        <!-- Breve video, con imagenes extraidas de Pexels, con elementos claves del proyecto, sirve de fondo para todo el header -->
+        <video class="header__video" autoplay loop muted playsinline>
+            <source src="assets/video-inicio2.mp4" type="video/mp4">
+        </video>
+    </header>
+    <!-- El Main es el cuerpo principal de mi página. Está dividido en cuatro secciones. Introducción, territorios, religiones y personajes -->
+    <main class="main">
+        <!-- La sección Introducción realiza una breve ficha técnica de detalles de la historia, así como una pequeña sinopsis sin ningún tipo de spoiler-->
+        <section class="main__intro">
+            <!-- Sinopsis -->
+            <p class="main__intro-p">Antes de que los humanos ocuparan estas tierras, los Hijos de la Luna vivían en
+                armonía. <br>Bestias y hombres eran uno solo; ahora, somos pocos los que quedamos. <br>Malditos y
+                condenados, nos vemos obligados a esperar y a dejar nuestro futuro en manos de aquellos que desconocen
+                su destino. <br>Anhelamos la liberación de nuestros pueblos y el levantamiento contra quienes nos
+                arrebataron todo, pero por ahora solo esperamos a que la luna vuelva a alzarse y el sol finalmente se
+                apague.</p>
+            <!-- Ficha técnica. stá formulada como un slider, donde los botones del final permitan al usuario pasar entre los diferentes elementos-->
+            <div class="main__intro-slider">
+                <div class="main__intro-info">
+                    <!-- Género narrativo -->
+                    <div class="main__intro-section">
+                        <!-- Titulo -->
+                        <h3 class="main__intro-h3">Fantasía</h3>
+                        <!-- Subtitulo -->
+                        <p class="main__intro-subtitle">Alta fantasía</p>
+                        <!-- Descripción -->
+                        <p class="main__intro-description">La fantasía nos presenta escenarios sobrenaturales que
+                            distorsionan el concepto que tenemos de realidad. <br>Este género comenzó a extenderse a
+                            finales del siglo XVIII y comienzos del XIX con el Romanticismo, aunque podríamos situar su
+                            origen en los cuentos clásicos o incluso las leyendas griegas. <br>Es un género que abarca
+                            sobre todo la narrativa, donde aparecen criaturas fantásticas y en ocasiones se desdibujan
+                            las leyes de la física. <br>Se puede dividir en alta fantasía (ambientada en mundos
+                            imaginarios) o baja fantasía (ambientada en el mundo real)</p>
+                        <!-- Como aplica a este proyecto -->
+                        <p class="main__intro-text">Esta historia se sitúa en un mundo alternativo, más concretamente en
+                            una península llamada <b>Aille</b>, dónde la tecnología se entremezcla con los resquicios de
+                            una antigua magia, y donde humanos y criaturas, los conocidos <b>mestizos</b>, conviven.</p>
+                    </div>
+                    <!-- Público objetivo -->
+                    <div class="main__intro-section">
+                        <!-- Titulo -->
+                        <h3 class="main__intro-h3">Público juvenil</h3>
+                        <!-- Descripción -->
+                        <p class="main__intro-description">Las novelas juveniles están destinadas a públicos entre los
+                            12-18 años, por regla general, aunque actualmente este límite se ha desdibujado y las
+                            novelas consideradas juveniles pueden abarcar públicos mucho más generales. <br>Se
+                            consideran novelas de transición, donde se abandonan los cuentos infantiles y las tramas
+                            comienzan a acercarse a relatos mucho más adultos, presentando por primera vez temas como el
+                            sexo, la violencia o las adicciones. <br>En la literatura juvenil suelen triunfar el
+                            misterio, los thrillers, el terror, la fantasía, el romance y la ciencia ficción.</p>
+                        <!-- Como aplica a este proyecto -->
+                        <p class="main__intro-text">Esta obra presenta personajes entre los <b>20-23 años</b>; figuras
+                            en una edad superior al público dirigido, pero precisamente por eso pueden servir de
+                            referentes. Además, aborda diversos temas desde el descubrimiento de uno mismo, el camino a
+                            elegir, el romance y la superación.</p>
+                    </div>
+                    <!-- Tipo de obra -->
+                    <div class="main__intro-section">
+                        <!-- Titulo -->
+                        <h3 class="main__intro-h3">Trilogía</h3>
+                        <!-- Descripción -->
+                        <p class="main__intro-description">Una trilogía es una serie de obras, desde literatura a cine,
+                            que se compone de tres ejemplares que comparten autor y alguna característica común. <br>Por
+                            regla general las trilogías suelen continuar el mismo hilo argumentativo, pero en ocasiones,
+                            simplemente se unen por personajes, temática o incluso lugares de desarrollo. <br>En
+                            definitiva, las obras de una trilogía deben compartir algún punto en común.</p>
+                        <!-- Como aplica a este proyecto -->
+                        <p class="main__intro-text">Esta trilogía sigue a los mismos personajes durante toda la serie,
+                            con un <b>salto temporal</b> de tres años entre el primer y segundo tomo, y aunque
+                            alejándose del hilo argumental de la primera, la segunda y la tercera parte recogen los
+                            cabos sueltos y continúan la historia no solo de los personajes, si no del mundo que les
+                            rodea.</p>
+                    </div>
+                </div>
+                <!-- Botones del slider -->
+                <ul class="main__intro-ul">
+                    <!-- Relacionado al género narrativo -->
+                    <li class="main__intro-li">
+                        <button class="main__intro-btn" aria-label="Genero"></button>
+                    </li>
+                    <!-- Relacionado al público objetivo -->
+                    <li class="main__intro-li">
+                        <button class="main__intro-btn" aria-label="Publico"></button>
+                    </li>
+                    <!-- Relacionado al tipo de obra -->
+                    <li class="main__intro-li">
+                        <button class="main__intro-btn" aria-label="Obra"></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Subtemas -->
+            <ul class="main__intro-temas">
+                <li class="main__intro-tema">Romance</li>
+                <li class="main__intro-tema">Aventuras</li>
+                <li class="main__intro-tema">Amistad</li>
+                <li class="main__intro-tema">LGTB</li>
+                <li class="main__intro-tema">Magia</li>
+                <li class="main__intro-tema">Traición</li>
+            </ul>
+        </section>
+        <!-- SECCIÓN DE PESTAÑAS. Explica los territorios de la historia -->
+        <section class="main__territories">
+            <!-- TITULO DE LA SECCION. Establecido en ID para poder acceder a él desde la barra de navegación del header -->
+            <h2 id="main__territories-h2">Territorios y tribus</h2>
+            <div class="main__territories-tabs">
+                <!-- Nombre de cada territorio, funcionan como botones para cambiar entre pestañas -->
+                <ul class="main__territories-ul">
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn is-active">Klate</button>
+                    </li>
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn">Okushe</button>
+                    </li>
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn">Hegan</button>
+                    </li>
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn">Etkus</button>
+                    </li>
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn">Phanano</button>
+                    </li>
+                    <li class="main__territories-li">
+                        <button class="main__territories-btn">Naka</button>
+                    </li>
+                </ul>
+                <div class="main__territories-wrapper">
+                    <!-- Cada pestaña está divivida en una imagen representativa y un breve texto sobre el lugar -->
+                     <!-- PESTAÑA 0. Tiene el atributo is-active, porque es la primera que se visualiza-->
+                    <div class="main__territories-option is-active">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/klate864.svg 864w, assets/tribus/klate472.svg 472w, assets/tribus/klate326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/klate.svg" alt="Klate" class="main__territories-img" loading="lazy" width="500" height="707" title="Klate">
+                        <!-- Texto representativo del lugar -->
+                         <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por la tribu <ins>Taonel</ins>, <b>Klate</b> es el
+                                territorio central del reino. Alberga las ciudades más grandes y la mayor cantidad de
+                                avances tecnológicos. <br>Su capital es <b>Seluruh</b>, una ciudad al sur que funciona
+                                como punto de encuentro para los altos mandos. <br>Además en este territorio también se
+                                localiza <b>Inkun</b>, hogar de los reyes y capital geográfica del reino de Aille.
+                                <br>Cuenta también con la academia para caballeros, el mayor lugar de estudio de toda la
+                                península, donde jóvenes se preparan en diferentes materias o se forman como los futuros
+                                guardias del reino.</p>
+                            <h3 class="main__territories-h3">Tribu Taonel</h3>
+                            <p class="main__territories-p">Conocidos como la tribu de la llanura, responden directamente
+                                ante la realeza y sus jefes superiores son subordinados directos de los reyes. <br>Sus
+                                gentes hablan la lengua común, más el dialecto creado a lo largo de las generaciones.
+                                <br>A pesar de que sus condiciones de vida podrían parecer mejores a las de sus
+                                territorios hermanos, esto solo sucede en las grandes ciudades donde se reúnen las
+                                clases altas. Sus clases bajas siguen trabajando los campos y proporcionan el sustento
+                                principal para que las ciudades puedan seguir creciendo. <br>Son una de las pocas tribus
+                                que conservan a una familia de héroes.</p>
+                        </div>
+                    </div>
+                    <!-- PESTAÑA 1 -->
+                    <div class="main__territories-option">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/okushe864.svg 864w, assets/tribus/okushe472.svg 472w, assets/tribus/okushe326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/okushe.svg" alt="Okushe" class="main__territories-img" loading="lazy" width="500" height="707" title="Okushe">
+                        <!-- Texto representativo del lugar -->
+                         <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por las tribus <ins>Himoya</ins> y
+                                <ins>Shabeell</ins>, <b>Okushe</b> es un territorio de los bosques del este y uno de los
+                                cuatro lugares donde habitan los mestizos. <br>Es uno de los terrenos más deshabitados,
+                                sus tribus son pequeñas y reservadas. Se dice que sus bosques están encantados. <br>Su
+                                capital es <b>Quiari</b>, hogar de los <ins>Himoya</ins> y la ciudad más antigua del
+                                reino. <br>Colindan directamente con la frontera del reino.</p>
+                            <h3 class="main__territories-h3">Tribu Himoya</h3>
+                            <p class="main__territories-p">Son la tribu más antigua del reino y son la única tribu de
+                                humanos que no responde ante la realeza. <br>Su jefe de tribu es <i>Percival III</i> y
+                                su gobierno es independiente del resto. <br>Tienen sus propias tradiciones, costumbres y
+                                lenguaje propio. Es un pueblo autosuficiente, más avanzado que el resto y del que se
+                                dice guarda los últimos resquicios de magia del reino.</p>
+                            <h3 class="main__territories-h3">Tribu Shabeell</h3>
+                            <p class="main__territories-p">Son los descendientes directos de los <ins>Shab</ins>,
+                                antigua tribu de cambia pieles de felinos. <br>Su capital es <b>Cherlets</b>, la última
+                                ciudad del reino. El jefe de su tribu es <i>Ventura I</i> y aunque responden ante los
+                                reyes, tienen sus propias tradiciones, costumbres y lenguaje propio. El héroe de su
+                                tribu desapareció tras <i>la Guerra de las Pieles</i>.</p>
+                        </div>
+                    </div>
+                    <!-- PESTAÑA 2 -->
+                    <div class="main__territories-option">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/hegan864.svg 864w, assets/tribus/hegan472.svg 472w, assets/tribus/hegan326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/hegan.svg" alt="Hegan" class="main__territories-img" loading="lazy" width="500" height="707" title="Hegan">
+                        <!-- Texto representativo del lugar -->
+                         <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por la tribu <ins>Gairan</ins>, <b>Hegan</b> es un
+                                territorio de los bosques del norte y uno de los cuatro lugares donde habitan los
+                                mestizos. <br>Su territorio jamás se recuperó de la guerra y quedó practicamente vacío
+                                hasta que los <ins>Gairan</ins> se instalaron en ella. <br>Exportan la mayor cantidad de
+                                madera del reino. <br>Su capital es <b>Lin</b>, y es la ciudad más pequeña del reino.
+                            </p>
+                            <h3 class="main__territories-h3">Tribu Gairan</h3>
+                            <p class="main__territories-p">Son los descendientes directos de los <ins>Gair</ins>,
+                                primeros cambia pieles que existieron y últimos que se marcharon. <br>El jefe de su
+                                tribu es <i>Darin II</i> y aunque responden ante los reyes, tienen sus propias
+                                tradiciones, costumbres y lenguaje propio. <br>El héroe de su tribu desapareció tras
+                                <i>la Guerra de las Pieles</i>. </p>
+                        </div>
+                    </div>
+                    <!-- PESTAÑA 3 -->
+                    <div class="main__territories-option">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/etkus864.svg 864w, assets/tribus/etkus472.svg 472w, assets/tribus/etkus326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/etkus.svg" alt="Etkus" class="main__territories-img" loading="lazy" width="500" height="707" title="Etkus">
+                        <!-- Texto representativo del lugar -->
+                         <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por la tribu <ins>Baddar</ins>, <b>Etkus</b> es un
+                                territorio al sur, conocido principalmente por su costa. <br>Su capital es <b>Tyge</b> y
+                                es la principal ciudad de comercio de todo el reino. <br>Sus costas son las únicas del
+                                reino que no están repletas de acantilados, por lo que sus gentes han aprovechado esta
+                                ventaja para basar su vida en el mar, tanto en pesca como comercio exterior. </p>
+                            <h3 class="main__territories-h3">Tribu Baddar</h3>
+                            <p class="main__territories-p"> Conocidos como la tribu del mar, responden directamente ante
+                                la realeza y sus jefes superiores son subordinados directos de los reyes. <br>Sus gentes
+                                hablan la lengua común, más el dialecto creado a lo largo de las generaciones. <br>Son
+                                una de las pocas tribus que conservan a una familia de héroes.</p>
+                        </div>
+                    </div>
+                    <!-- PESTAÑA 4 -->
+                    <div class="main__territories-option">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/phanano.svg 864w, assets/tribus/phanano472.svg 472w, assets/tribus/phanano326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/phanano.svg" alt="Phanano" class="main__territories-img" loading="lazy" width="500" height="707" title="Phanano">
+                        <!-- Texto representativo del lugar -->
+                         <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por las tribus <ins>Beinen</ins> y <ins>Teyra</ins>,
+                                <b>Phanano</b> es un territorio de las montañas al oeste de Aille y uno de los cuatro
+                                lugares donde habitan los mestizos. <br>Su capital es <b>Ango</b>, una de las ciudades
+                                más cercanas a su frontera, ya que fue uno de los últimos lugares donde los humanos se
+                                instalaron. <br>Resguardan los principales campos de entrenamiento militar del reino.
+                            </p>
+                            <h3 class="main__territories-h3">Tribu Beinen</h3>
+                            <p class="main__territories-p">Conocidos como la tribu de la montaña, responden directamente
+                                ante la realeza y sus jefes superiores son subordinados directos de los reyes. <br>Sus
+                                gentes hablan la lengua común, más el dialecto creado a lo largo de las generaciones.
+                                Sus gentes se dedican sobre todo a la minería y extraen el carbón necesario para que los
+                                trenes del reino funcionen. <br>Son una de las pocas tribus que conservan a una familia
+                                de héroes.</p>
+                            <h3 class="main__territories-h3">Tribu Teyra</h3>
+                            <p class="main__territories-p">Primera tribu de mestizos que existió, son los descencientes
+                                directos de los <ins>Tey</ins>, antigua tribu de cambia pieles de aves. Su capital es
+                                <b>Bame</b>, situada en la zona norte. <br>El jefe de su tribu es <i>Antinanco "El
+                                    Salvador"</i> y aunque responden ante los reyes, tienen sus propias tradiciones,
+                                costumbres y lenguaje propio. <br>El héroe de su tribu desapareció tras <i>la Guerra de
+                                    las Pieles.</i></p>
+                        </div>
+                    </div>
+                    <!-- PESTAÑA 5 -->
+                    <div class="main__territories-option">
+                        <!-- Imagen representativa del lugar -->
+                        <img srcset="assets/tribus/naka864.svg 864w, assets/tribus/naka472.svg 472w, assets/tribus/naka326.svg 326w"
+                            sizes="(max-width: 2560px) 864px, (max-width: 1440px) 472px, (max-width: 1024px) 326px"
+                            src="assets/tribus/naka.svg" alt="Naka" class="main__territories-img" loading="lazy" width="500" height="707" title="Naka">
+                        <!-- Texto representativo del lugar -->
+                        <div class="main__territories-text">
+                            <p class="main__territories-p">Habitada por la tribu <ins>Gades</ins>, <b>Naka</b> se
+                                encuentra bordeado por dunas y todo su territorio es un inmenso desierto. <br>Tienen una
+                                gran cantidad de canteras destinadas a la extracción de piedras preciosas, además de
+                                terrenos de cultivo de plantas exoticas que sirven para la realización de medicamentos.
+                                <br>Su capital es <b>Bereren</b>, una ciudad construida entre las dunas. </p>
+                            <h3 class="main__territories-h3">Tribu Gades</h3>
+                            <p class="main__territories-p">Son los descendientes directos de los <ins>Gad</ins>, los
+                                cambia pieles de lagarto. <br>El jefe de su tribu es <i>Eesho V</i> y aunque responden
+                                ante los reyes, tienen sus propias tradiciones, costumbres y lenguaje propio. <br>El
+                                héroe de su tribu desapareció tras <i>la Guerra de las Pieles.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Grid simple. Transiciones al hacer hover. Explica las religiones de la historia. No es necesario Java en esta sección-->
+        <section class="main__religions">
+            <!-- TITULO DE LA SECCION. Establecido en ID para poder acceder a él desde la barra de navegación del header -->
+            <h2 id="main__religions-h2">Religiones</h2>
+            <div class="main__religions-grid">
+                <div class="main__religions-picture">
+                    <!-- Imagen descriptiva -->
+                    <img src="assets/goddess.svg" alt="Imagen Pequeña" class="main__religions-img" loading="lazy">
+                    <div class="main__religions-text" title="La Diosa">
+                        <!-- Título -->
+                        <h3 class="main__religions-title">La Diosa</h3>
+                        <!-- Texto descriptivo-->
+                        <p class="main__religions-p"><b>Diosa de los humanos.</b> Creó el mundo en seis días y el
+                            séptimo descanso, para poder volver a levantarse el octavo y crear lo que conocían como el
+                            <i>hiltava</i>, un lugar bajo sus pies donde las almas condenadas irían a pasar el resto de
+                            sus días. </p>
+                    </div>
+                </div>
+                <div class="main__religions-picture">
+                    <!-- Imagen descriptiva -->
+                    <img src="assets/beast.svg" alt="Imagen Pequeña" class="main__religions-img" loading="lazy">
+                    <div class="main__religions-text" title="La Gran Bestia">
+                        <!-- Título -->
+                        <h3 class="main__religions-title">La Gran Bestia</h3>
+                        <!-- Texto descriptivo-->
+                        <p class="main__religions-p"><b>Diosa de los mestizos.</b> Recorrió el mundo y lo pobló de vida.
+                            Cuando su trabajo estuvo completado, se echó a dormir y sobre ella crecieron árboles y se
+                            formaron las montañas, sus lágrimas se convirtieron en ríos y de sus sueños nacieron los
+                            cambia pieles.</p>
+                    </div>
+                </div>
+                <div class="main__religions-picture">
+                    <!-- Imagen descriptiva -->
+                    <img src="assets/trinity.svg" alt="Imagen Pequeña" class="main__religions-img" loading="lazy">
+                    <div class="main__religions-text" title="La Trinidad">
+                        <!-- Título -->
+                        <h3 class="main__religions-title">La Trinidad</h3>
+                        <!-- Texto descriptivo-->
+                        <p class="main__religions-p"><b>Diosas de los Himoya.</b> El panteón de dioses tenía tres reinas
+                            sobre ellos: <i>Kelasis</i>, diosa del cielo, <i>Emera</i>, diosa del inframundo, y
+                            <i>Vrena</i>, diosa del mar.</p>
+                    </div>
+                </div>
+                <div class="main__religions-picture">
+                    <!-- Imagen descriptiva -->
+                    <img src="assets/moon.svg" alt="Imagen Pequeña" class="main__religions-img" loading="lazy">
+                    <div class="main__religions-text" title="La Madre Luna">
+                        <!-- Título -->
+                        <h3 class="main__religions-title">La Madre Luna</h3>
+                        <!-- Texto descriptivo-->
+                        <p class="main__religions-p"><b>Diosa perdida.</b> Madre de las estrellas, protectora de la
+                            naturaleza. La madre luna era la diosa de los hechiceros, pero cuando ellos se marcharon, a
+                            ella dejaron de buscarla.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Grid complejo. Se visualizan imagenes de los personajes principales y se crea una pestaña superior, que da una breve descripción del personaje, al hacer click sobre el nombre de cada uno -->
+        <section class="main__characters">
+            <!-- TITULO DE LA SECCION. Establecido en ID para poder acceder a él desde la barra de navegación del header -->
+            <h2 id="main__characters-h2">Personajes</h2>
+            <div class="main__characters-grid">
+                <!-- Personaje 1 -->
+                <div class="main__characters-option">
+                    <!-- Botón personaje 1 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox1">Kat</button>
+                    <!-- Imagen personaje 1 -->
+                    <img src="assets/personajes/Kat.svg" alt="character 1" class="main__characters-img" loading="lazy" title="Kat" width="500" height="500">
+                    <!-- Utiliza las mismas funciones que un lightbox de imagenes pero para crear la pestaña superior. Con la diferencia de que cada uno tiene una caracteristica diferente (1, 2, 3...), para poder seleccionar cada pestaña correspondiente que debe abrirse según su imagen. Intente usar el lightbox aprendido en clase, pero no conseguía ajustar cada imagen a un texto diferente, al final utilice ChatGPT para poder saber como relacionar ambos elementos y me propuso esta solución que acabo funcionando-->
+                    <!-- Pestaña personaje 1 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox1">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Katherine</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Kat</b> es
+                                una de las protagonistas de esta historia. <br>Tiene 22 años, los ojos verdes, el
+                                cabello oscuro y mide un metro sesenta. <br>Estudia en la <i>Academia de Caballeros</i>
+                                traducción e historia, para en un futuro trabajar como profesora en su ciudad. <br>Habla
+                                seis idiomas, le tiene miedo a los ríos, es la heredera de los héroes de los Himoya y
+                                tiene un secreto: <b>es la última cambia pieles del reino</b>.
+                            </p>
+                            <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 2 -->
+                <div class="main__characters-option">
+                    <!-- Botón personaje 2 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox2">Ren</button>
+                    <!-- Imagen personaje 2 -->
+                    <img src="assets/personajes/Ren.svg" alt="character 2" class="main__characters-img" loading="lazy" title="Ren" width="500" height="500">
+                    <!-- Pestaña personaje 2 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox2">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Renaud</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Gairan</i>, <b>Ren</b> es
+                                uno de los protagonistas de esta historia. <br>Tiene 20 años, los ojos verdes, es
+                                pelirrojo y mide un metro ochenta y siete. <br>Fue obligado por su familia a estudiar en
+                                la <i>Academia de Caballeros</i> y escogió traducción porque no sabía qué hacer. <br>Es
+                                el primogénito de los Gairan, mestizo de zorro y le tiene fobia a los reptiles. <br>Cree
+                                que no tiene demasiado sentido lo que hace allí, porque sabe que su futuro ya está
+                                decidido.</p>
+                            <!-- Botón cerrado -->   
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 3 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 3 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox3">Lion</button>
+                    <!-- Imagen personaje 3 -->
+                    <img src="assets/personajes/Lion.svg" alt="character 3" class="main__characters-img" loading="lazy" title="Lion" width="500" height="500">
+                    <!-- Pestaña personaje 3 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox3">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Lionel</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Taonel</i>, <b>Lion</b>
+                                es uno de los antagonistas de esta historia. <br>Tiene 22 años, los ojos azules, el pelo
+                                oscuro y mide un metro setenta y siete. <br>Estudia economía en la <i>Academia de
+                                    Caballeros</i>, aunque está prometido con la princesa y sabe que sus estudios poco
+                                importan. <br>Habla tres idiomas, es el heredero de los héroes de los Himoya y detesta a
+                                los mestizos.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 4 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 4 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox4">Nat</button>
+                    <!-- Imagen personaje 4 -->
+                    <img src="assets/personajes/Nathifa.svg" alt="character 4" class="main__characters-img" loading="lazy" title="Nat" width="500" height="500">
+                    <!-- Pestaña personaje 4 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox4">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Nathifa</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Taonel</i>, <b>Nat</b> es
+                                una de las antagonistas de esta historia. <br>Tiene 24 años, los ojos azules, cambia de
+                                color de pelo constantemente y mide un metro setenta. <br>Estudió medicina en palacio,
+                                hasta su último año que lo realizó en la <i>Academia de Caballeros</i>. <br>Es la única
+                                hija de los reyes y heredera al trono. <br>Está convencida de que debe cambiar las cosas
+                                en el reino o este acabará en guerra.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 5 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 5 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox5">Will</button>
+                    <!-- Imagen personaje 5 -->
+                    <img src="assets/personajes/Will.svg" alt="character 5" class="main__characters-img" loading="lazy" title="Will" width="500" height="500">
+                    <!-- Pestaña personaje 5 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox5">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">William</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Taonel</i>, <b>Will</b>
+                                es uno de los personajes secundarios de esta historia. <br>Tiene 21 años, los ojos
+                                marrones, el pelo castaño y mide un metro ochenta y cuatro. <br>Estudia ingeniería en la
+                                <i>Academia de Caballeros</i> y es uno de sus mejores luchadores. <br>Sus madres
+                                trabajan en la guardia real y esperan que él siga sus pasos, aunque él solo quiere
+                                dedicarse a la música y a contar historias. <br>Toca el laúd, la mandolina y el arpa.
+                            </p>
+                            <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 6 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 6 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox6">Vaiti</button>
+                    <!-- Imagen personaje 6 -->
+                    <img src="assets/personajes/Vaiti.svg" alt="character 6" class="main__characters-img" loading="lazy" title="Vaiti" width="500" height="500">
+                    <!-- Pestaña personaje 6 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox6">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Vaitiare</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Baddar</i>, <b>Vaiti</b>
+                                es una de los personajes secundarios de esta historia. <br>Tiene 21 años, los ojos
+                                azules, el pelo rubio y mide un metro setenta y cinco. <br>Estudia medicina en la
+                                <i>Academia de Caballeros</i> y es parte de la guardia de la academia. <br>Su hermano,
+                                Azariel, y ella sueñan con trabajar en Inkun. Ella quiere formar parte de la guardia
+                                real.</p>
+                            <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 7 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 7 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox7">Azariel</button>
+                    <!-- Imagen personaje 7 -->
+                    <img src="assets/personajes/Azariel.svg" alt="character 7" class="main__characters-img" loading="lazy" title="Azariel" width="500" height="500">
+                    <!-- Pestaña personaje 7 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox7">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Azariel</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Baddar</i>,
+                                <b>Azariel</b> es uno de los personajes secundarios de esta historia. <br>Tiene 21 años,
+                                los ojos azules, el pelo rubio y mide un metro setenta. <br>Estudia ingeniería en la
+                                <i>Academia de Caballeros</i> y trabaja en los laboratorios de la academia. <br>Su
+                                hermana, Vaitiare, y él sueñan con trabajar en Inkun. Él quiere ser inventor en una de
+                                los grandes talleres de la capital.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 8 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 8 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox8">Elu</button>
+                    <!-- Imagen personaje 8 -->
+                    <img src="assets/personajes/Eluney.svg" alt="character 8" class="main__characters-img" loading="lazy" title="Elu" width="500" height="500">
+                    <!-- Pestaña personaje 8 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox8">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Eluney</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Teyra</i>, <b>Elu</b> es
+                                una de los personajes secundarios de esta historia. <br>Tiene 22 años, los ojos azules,
+                                el pelo azul y mide un metro ochenta. <br>Estudia ingeniería en la <i>Academia de
+                                    Caballeros</i> y ayuda en la guardia del lugar. <br>Es la primogénita de los Teyra,
+                                mestiza de ave, pero su padre la desheredó tras enterarse que jamás conseguiría casarla
+                                con un hombre. </p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 9 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 9 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox9">Lonhard</button>
+                    <!-- Imagen personaje 9 -->
+                    <img src="assets/personajes/Lonhard.svg" alt="character 9" class="main__characters-img" loading="lazy" title="Lonhard" width="500" height="500">
+                    <!-- Pestaña personaje 9 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox9">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Lonhard</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Shabeell</i>,
+                                <b>Lonhard</b> es uno de los personajes secundarios de esta historia. <br>Tiene 21 años,
+                                los ojos verdes, el pelo castaño y mide un metro noventa y tres. <br>Estudia economía en
+                                la <i>Academia de Caballeros</i>. <br>Es la primogénita de los Shabeell, mestiza de
+                                tigre y no tiene ningún tipo de filtro al hablar.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 10 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 10 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox10">Ki</button>
+                    <!-- Imagen personaje 10 -->
+                    <img src="assets/personajes/Ki.svg" alt="character 10" class="main__characters-img" loading="lazy" title="Ki" width="500" height="500">
+                    <!-- Pestaña personaje 10 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox10">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Ki</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Gades</i>, <b>Ki</b> es
+                                una de los personajes secundarios de esta historia. <br>Tiene 20 años, los ojos verdes,
+                                el pelo verde y mide un metro setenta. <br>Estudia medicina en la <i>Academia de
+                                    Caballeros</i>, ya que toda su vida se formó para ser curandera en su tribu.
+                                <br>Mestiza de lagarto, no es la primogénita de los Gades, pero tras la muerte de sus
+                                hermanos mayores, se convirtió en la heredera. </p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 11 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 11 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox11">Eira</button>
+                    <!-- Imagen personaje 11 -->
+                    <img src="assets/personajes/eira.svg" alt="character 11" class="main__characters-img" loading="lazy" title="Eira" width="500" height="500">
+                    <!-- Pestaña personaje 11 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox11">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Eira</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Eira</b>
+                                es una de los personajes secundarios de esta historia. <br>Tiene 25 años, los ojos
+                                verdes, el pelo castaño y mide un metro setenta y tres. <br>Trabaja en la <i>Academia de
+                                    Caballeros</i> como profesora y en el servicio médico. <br>Es la hermana mayor de
+                                Kat, pero ella no heredó la condición de su hermana. Es la primogénita de los Himoya.
+                            </p>
+                            <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 12 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 12 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox12">Gala</button>
+                    <!-- Imagen personaje 12 -->
+                    <img src="assets/personajes/Gala.svg" alt="character 12" class="main__characters-img" loading="lazy" title="Gala" width="500" height="500">
+                    <!-- Pestaña personaje 12 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox12">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Gala</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Gala</b>
+                                es una de los personajes secundarios de esta historia. <br>Tiene 40 años, los ojos
+                                azules, el pelo blanco y mide un metro setenta. <br>Es la directora de la <i>Academia de
+                                    Caballeros</i>, aunque en el pasado fue comandante de la guardia real. <br>Es una de
+                                las soldados más fuertes y mejor entrenadas de todo el reino. Mantiene una relación
+                                estrecha con la familia real.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 13 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 13 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox13">Percival</button>
+                    <!-- Imagen personaje 13 -->
+                    <img src="assets/personajes/Percival.svg" alt="character 13" class="main__characters-img" loading="lazy" title="Percival" width="500" height="500">
+                    <!-- Pestaña personaje 13 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox13">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Percival</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>,
+                                <b>Percival</b> es uno de los personajes secundarios de esta historia. <br>Tiene 47
+                                años, los ojos azules, el pelo oscuro y mide un metro setenta. <br>Es el jefe de los
+                                Himoya, profesor en Quiari y padre de Kat y Eira. <br>Fue un gran guerrero en su
+                                juventud, pero tras un accidente a caballo se dislocó la rodilla y jamás ha vuelto a
+                                andar sin bastón.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 14 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 14 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox14">Alaitz</button>
+                    <!-- Imagen personaje 14 -->
+                    <img src="assets/personajes/Alaitz.svg" alt="character 14" class="main__characters-img" loading="lazy" title="Alaitz" width="500" height="500">
+                    <!-- Pestaña personaje 14 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox14">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Alaitz</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Gairan</i>, <b>Alaitz</b>
+                                es una de los personajes secundarios de esta historia. <br>Tiene 17 años, los ojos
+                                verdes, es pelirroja y mide un metro ochenta. <br>Mestiza de zorro, es la hermana
+                                pequeña de Ren y es una devota creyente de la <i>Gran Bestia</i>. <br>Le gustaría poder
+                                dedicar su vida al culto, pero sabe que el deber con su tribu está por encima.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 15 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 15 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox15">Gael</button>
+                    <!-- Imagen personaje 15 -->
+                    <img src="assets/personajes/Gael.svg" alt="character 15" class="main__characters-img" loading="lazy" title="Gael" width="500" height="500">
+                    <!-- Pestaña personaje 15 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox15">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Gael</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Gael</b>
+                                es uno de los personajes secundarios de esta historia. <br>Tiene 22 años, los ojos
+                                marrones, el pelo oscuro y mide un metro sesenta y tres. <br>Es uno de los amigos de la
+                                infancia de Kat. Trabaja en Quiari como guardia de los bosques. <br>Dibuja, escribe y le
+                                encanta la lectura.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 16 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 16 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox16">Hye</button>
+                    <!-- Imagen personaje 16 -->
+                    <img src="assets/personajes/Hye.svg" alt="character 16" class="main__characters-img" loading="lazy" title="Hye" width="500" height="500">
+                    <!-- Pestaña personaje 16 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox16">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Hye</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Hye</b> es
+                                una de los personajes secundarios de esta historia. <br>Tiene 21 años, los ojos
+                                marrones, el pelo castaño y mide un metro setenta. <br>Es una de las amigas de la
+                                infancia de Kat. Trabaja en Quiari en el mercado, en un puesto de pasteles que tiene su
+                                familia. <br>Ayuda en la biblioteca, le gusta la jardinería y tocar la lira.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 17 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 17 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox17">Edwin</button>
+                    <!-- Imagen personaje 17 -->
+                    <img src="assets/personajes/Edwin.svg" alt="character 17" class="main__characters-img" loading="lazy" title="Edwin" width="500" height="500">
+                    <!-- Pestaña personaje 17 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox17">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Edwin</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Edwin</b>
+                                es uno de los personajes secundarios de esta historia. <br>Tiene 21 años, los ojos
+                                azules, el pelo rubio y mide un metro setenta. <br>Es uno de los amigos de la infancia
+                                de Kat. Trabaja en Quiari en los laboratorios. <br>Ayuda en la organización de eventos y
+                                le gusta dar paseos junto al río.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Personaje 18 -->
+                <div class="main__characters-option">
+                    <!-- Boton personaje 18 -->
+                    <button class="main__characters-btn" data-target="main__characters-lightbox--lightbox18">Nydia</button>
+                    <!-- Imagen personaje 18 -->
+                    <img src="assets/personajes/Nydia.svg" alt="character 18" class="main__characters-img" loading="lazy" title="Nydia" width="500" height="500">
+                    <!-- Pestaña personaje 18 -->
+                    <div class="main__characters-lightbox main__characters-lightbox--lightbox18">
+                        <div class="main__characters-lightbox-panel">
+                            <h3 class="main__characters-lightbox-name">Nydia</h3>
+                            <p class="main__characters-lightbox-p">Perteneciente a la tribu <i>Himoya</i>, <b>Nydia</b>
+                                es una de los personajes secundarios de esta historia. <br>Tiene 21 años, los ojos
+                                marrones, el pelo castaño y mide un metro sesenta y siete. <br>Es una de las amigas de
+                                la infancia de Kat. Trabaja en Quiari como guardia de la frontera. <br>Ayuda en la
+                                escuela infantil como profesora de pintura.</p>
+                                <!-- Botón cerrado -->
+                            <button class="main__characters-lightbox-btn-close">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de pagina  -->
+    <footer class="footer">
+        <!-- Redes sociales -->
+        <ul class="footer__rsss">
+            <!-- Enlaces que cargan y abren en una pagina externa -->
+            <li class="footer__rsss-rss"><a href="https://garciabalmudena.wixsite.com/thesunwillshineagain" title="Ir a Wix" target="_blank" rel="noreferrer"><img src="assets/wix-svgrepo-com.svg" alt="Img Wix" class="footer__rsss-rss-img" title="Wix" loading="lazy" width="64" height="64"></a></li>
+            <li class="footer__rsss-rss"><a href="https://www.instagram.com/_j.laufeyson_/" title="Ir a Instagram" target="_blank" rel="noreferrer"><img src="assets/instagram-svgrepo-com.svg" alt="Img Instagram" class="footer__rsss-rss-img" title="Instagram" loading="lazy" width="64" height="64"></a></li>
+        </ul>
+        <!-- Titulo y logo -->
+        <div class="footer__icon">
+            <p class="footer__icon-p">Proyecto Mestizos</p>
+        </div>
+        <!-- Nombre autor -->
+        <p class="footer__author">Almudena García Barragán</p>
+    </footer>
+</body>
+
+</html>
