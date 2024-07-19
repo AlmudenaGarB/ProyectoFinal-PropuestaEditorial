@@ -296,8 +296,6 @@ span.fade {
     flex-flow: column nowrap;
     align-items: flex-start;
     gap: 1rem;
-
-    text-align: justify;
 }
 .main__intro-subtitle {
     text-decoration: underline;
@@ -444,7 +442,6 @@ span.fade {
 }
 .main__territories-p {
     font-size: 1em;
-    text-align: justify;
     line-height: 1.7rem;
 }
 
